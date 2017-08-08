@@ -1,0 +1,31 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.main{
+	margin: 50px auto;
+	width: 700px;
+	height: 100px;
+	position: relative;
+	background-color: #666;
+	overflow: hidden;
+	
+}
+.main>div{
+
+}
+.main>div>div{
+	margin: 0 auto;
+	width: 500px;
+	height: 100px;
+	position: relative;
+}
+.d1{
+	background-color: #F01111;
+}
+.d2{
+	background-color: olive;
+}
+.d3{
+	background-color:blue;
+}

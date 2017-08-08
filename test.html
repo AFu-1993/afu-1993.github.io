@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的简历</title>
+    <link rel="stylesheet" type="text/css" href="css/test.css">
+</head>
+<body>
+    <div class="main">
+        <div class="d0">
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3"></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src='js/lib/jquery.js'></script>
+    <script type="text/javascript" src='js/lib/jquery.mousewheel.js'></script>
+    <script type="text/javascript">
+        var d0=$('.d0');
+        $('.main').mousewheel(function(event) {
+            event.preventDefault();
+            $(this).animate({scrollTop:100+$(this).scrollTop()},1000);
+            var st=d0.scrollTop();
+        console.log(event.deltaX, event.deltaY, event.deltaFactor,st);
+        });
+    </script>
+</body>
+</html>

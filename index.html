@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>我的简历</title>
+	<script type="text/javascript" data-main="js/jianli" src='js/lib/require.js'></script>
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/jianli.css">
+</head>
+<body>
+
+	<!-- <header></header> -->
+	<nav id="nav">
+		<div class="nav-top">
+			<h2>黄邦胜</h2>
+			<p>一直被超越，从未被模仿</p>
+			<img class="mypic" src="pic/user-pic.jpg">
+		</div>
+		<div class="nav-bottom">
+			<ul>
+				<div id="nav-silder"></div>
+				<li data-index="1" class="selected">
+					<a href="">基本</a>
+				</li>
+				<li data-index="2">
+					<a href="">优势</a>
+				</li>
+				<li data-index="3">
+					<a href="">更多</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="main">
+		<div class="d1" data-index='1' style="display: none;">
+			<h2>基本</h2>
+			<p>基本信息</p>
+			<div class="content" >
+				<p><span class="title">姓名：</span>
+				黄邦胜</p>
+				<p><span class="title">学历：</span>
+				沈阳理工大学（本科）</p>
+				<p><span class="title">专业：</span>
+				信息与计算科学</p>
+				<p><span>技能：</span>javascript,css,html</p>
+			</div>
+		</div>
+		<div class="d2" data-index='2' style="display: none;">
+			<h2>优势</h2>
+			<p>为什么不是别人家的孩子</p>
+			<div class="content" >
+				<div class="youshi-l">
+					<ul >
+						<li>javascript能力</li>
+						<li>css能力</li>
+						<li>html能力</li>
+					</ul>
+				</div>
+				<div class="youshi-r">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<p>ps:有些后端的经验，了解java，javaWeb，nodejs。比较勤奋！</p>
+			</div>
+		</div>
+		<div class="d3" data-index='3'>
+			<h2>更多</h2>
+			<p>更多。。。</p>
+			<div class="content" >
+				<p>完成了<a href="http://ife.baidu.com/">百度前端学院</a>17年的全部基础题</p>
+				<p>我的<a href="https://github.com/AFu-1993">github</a>上有我做的单页</p>
+				<p>一直在学习，努力做一个全栈工程师</p>
+				<div class="pic">
+					<a href=""><img src="pic/jd.png"></a>
+					<a href=""><img src="pic/jd.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
