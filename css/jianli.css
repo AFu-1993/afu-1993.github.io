@@ -95,6 +95,10 @@ li.selected{
 	border: 5px solid #fff;
 	border-radius: 50px;
 	cursor: pointer;
+	transition: transform 1s;
+}
+.mypic:hover{
+	transform: rotateY(180deg);
 }
 
 
@@ -148,6 +152,20 @@ li.selected{
 }
 .d1{
 	background-color: #eee;
+	position: relative;
+}
+#main>.d1 .tip{
+	position: absolute;
+	bottom: 10%;
+	left: 30%;
+	font-size: 24px;
+	color: #333;
+	animation: mymove 1.5s infinite;
+	animation-direction:alternate;
+}
+@keyframes mymove{
+	from{bottom: 10%;}
+	to {bottom:15%; }
 }
 
 .d2{
