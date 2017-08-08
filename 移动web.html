@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#wrap{
+			width: 100%;
+			min-width: 300px;
+			background-color: #aaa;
+			font-size: 0;
+		}
+		header,div.banner,.d1,.d2,.d3{
+			width: 100%;
+			position: relative;
+		}
+		header{
+			background-color: orange;
+			text-align: center;
+		}
+		header h1{
+			font-size: 24px;
+			line-height: 50px;
+
+		}
+		header a{
+			display: inline-block;
+			position: absolute;
+			line-height: 50px;
+			top: 0;
+			left: 20px;
+		}
+		/*1111111111111111111111111111*/
+		nav.n1{
+			display: flex;
+			background-color: #aaa;
+			font-size: 16px;
+		}
+		nav.n1>div{
+			flex: 1;
+			box-sizing: border-box;
+			line-height: 40px;
+			text-align: center;
+			padding-bottom: 5px;
+		}
+		nav.n1>div:hover{
+			padding-bottom: 0;
+			border-bottom: 5px solid orange;
+		}
+		/*222222222222222222222222222222*/
+		.banner img{
+			width: 100%;
+		}
+		/*33333333333333333333333333*/
+		nav.n2{
+			display: flex;
+			justify-content: space-between;
+			padding: 0px 20px;
+			background-color: #888;
+
+		}
+		nav.n2>div{
+			flex: 1;
+			font-size: 16px;
+			border-bottom: 1px solid red;
+			text-align: center;
+			padding: 20px 0;
+		}
+		nav.n2>div>img{
+			width: 50%;
+			margin-bottom: 20px;
+		}
+		/*444444444444444444444444444444*/
+		.d1{
+			display: flex;
+			font-size: 16px;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.d1>div{
+
+			flex: 1;
+			box-sizing: border-box;
+			border-right: 1px solid green;
+			text-align: center;
+			padding: 10px 0;
+		}
+		.d1>div:last-child{
+			border: 0px;
+		}
+		.d1>div img{
+			width: 80%;
+		}
+		.d1>div h2{
+			font-size: 24px;
+		}
+		/*55555555555555555555555555*/
+		section.s1{
+			background-color: orange;
+			font-size: 16px;
+
+		}
+		section.s1 .s1-content{
+			display: flex;
+			flex-direction: column;
+			box-sizing: border-box;
+			margin: 20px;
+			border-top: 2px solid red;
+		}
+		.s1-content>div{
+			flex: 1;
+			display: flex;
+		}
+
+		
+		.s1-content>div>div{
+			flex: 1;
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 10px;
+		}
+		.s1-content>div>div:first-child{
+			flex: .3;
+			display: flex;
+			margin-right: 5%;
+		}
+		.s1-content>div>div>img{
+			display: block;
+			height: 100%;
+			border: 20px solid black;
+			box-sizing: border-box;
+		}
+		.s1-content>div>div>div{
+			width: 45%;
+			display: flex;
+			background-color: #fff;
+			margin-left: 5%;
+			margin-bottom:1%;
+
+		}
+		.s1-content>div>div>div>p{
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<a href="">返回</a>
+			<h1>这是标题</h1>
+		</header>
+		<nav class="n1">
+			<div class="nav-div">导航</div>
+			<div class="nav-div">导航</div>
+			<div class="nav-div">导航</div>
+			<div class="nav-div">导航</div>
+			<div class="nav-div">导航</div>
+		</nav>
+		<div class="banner">
+			<img src="../pic/d2.jpg">
+		</div>
+		<nav class="n2">
+			<div>
+				<img src="../pic/d3-2.png" alt="">
+				<p>标签</p>
+			</div>
+			<div>
+				<img src="../pic/d3-2.png" alt="">
+				<p>标签</p>
+			</div>
+			<div>
+				<img src="../pic/d3-2.png" alt="">
+				<p>标签</p>
+			</div>
+			<div>
+				<img src="../pic/d3-2.png" alt="">
+				<p>标签</p>
+			</div>
+			<div>
+				<img src="../pic/d3-2.png" alt="">
+				<p>标签</p>
+			</div>
+		</nav>
+		<div class="d1">
+			<div>
+				<img src="../pic/d3-1.png" alt="">
+				<h2>分栏1</h2>
+				<p>分栏小标题</p>
+
+			</div>
+			<div>
+				<img src="../pic/d3-1.png" alt="">
+				<h2>分栏2</h2>
+				<p>分栏小标题</p>
+			</div>
+			<div>
+				<img src="../pic/d3-1.png" alt="">
+				<h2>分栏3</h2>
+				<p>分栏小标题</p>
+			</div>
+		</div>	
+		<section class="s1">
+			<h4>模块一</h4>
+			<div class="s1-content">
+				<div>
+					<div>
+						<img src="../pic/d3-3.png">
+					</div>
+					<div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<img src="../pic/d3-3.png">
+					</div>
+					<div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="s1">
+			<h4>模块er</h4>
+			<div class="s1-content">
+				<div>
+					<div>
+						<img src="../pic/d3-3.png">
+					</div>
+					<div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+					</div>
+				</div>
+				<div>
+					<div>
+						<img src="../pic/d3-3.png">
+					</div>
+					<div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+						<div><p>这是文案</p></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class='d2'></div>
+		<div class="d3"></div>
+	</div>
+</body>
+</html>

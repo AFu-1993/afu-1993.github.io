@@ -1,7 +1,7 @@
 define(['jquery'],function($) {
 	var searchBox=$('#search input');
 	var index=0;
-	var arr=['热烈欢迎刘金东','掌声！！！！','不要停','继续。。。鼓掌','刘东利是大傻逼'];
+	var arr=['产品一','产品二','商品三','手机四','电器五'];
 	var searchBoxSTO;
 	function searchBoxShow(num) {
 		// searchBox.css('color','#666');

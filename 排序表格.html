@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="zh-CN"><head>	<meta charset="UTF-8">	<title>Document</title>	<style type="text/css">		table{			border-collapse: collapse;			border: 1px solid black;		}		td{			border: 1px solid black;			padding: 10px 30px;			line-height: 30px;			text-align: center;			position: relative;		}		button{			border: 0;			background-color: transparent;			outline: none;			padding: 1px;		}		button:hover{			color: red;			border: 1px solid red;			padding: 0;		}		button:first-child{			position: absolute;			top: 1px;			right: 1px;		}		button+button{			bottom: 1px;			right: 1px;			position: absolute;		}	</style></head><body>	<table id="tb">		<tr>			<td>			姓名			</td>			<td id="yw">语文<button>▲</button>			<button>▼</button>			</td>			<td id="sx">			数学			<button>▲</button>			<button>▼</button>			</td>			<td id="yy">			英语			<button>▲</button>			<button>▼</button>			</td>			<td id="zf">			总分			<button>▲</button>			<button>▼</button>			</td>		</tr>		<tr>			<td>小明</td>			<td>80</td>			<td>90</td>			<td>70</td>			<td>240</td>		</tr>		<tr>			<td>小红</td>			<td>90</td>			<td>60</td>			<td>90</td>			<td>240</td>		</tr>		<tr>			<td>小亮</td>			<td>60</td>			<td>100</td>			<td>100</td>			<td>230</td>		</tr><tr>			<td>校长</td>			<td>180</td>			<td>190</td>			<td>170</td>			<td>1240</td>		</tr>	</table>	
+<script type="text/javascript">	
+	var table=document.getElementById('tb');
+
+	// 加载完页面之后执行
+	window.addEventListener('load',function() {
+			bangding();
+	});
+	function bangding() {
+		var allBtn=document.getElementsByTagName('button');
+		var count=1;
+		for (var i = 0; i < allBtn.length/2; i++) {
+			
+			(function(num) {
+					allBtn[num*2].addEventListener('click',function() {
+										sort(num,true);
+									});
+					allBtn[num*2+1].addEventListener('click',function() {
+										sort(num,false);
+									});
+			})(i);
+
+				
+		}
+	}
+
+	function sort(num,bool) {
+		var trArr=[];
+		var keys=[];//存放比较的实际数值
+		var allTr=document.getElementsByTagName("tr");
+		var temp;
+		for (var i = 1; i < allTr.length; i++) {
+			trArr.push(allTr[i]);
+			keys[i-1]=[i-1,Number(allTr[i].children[num+1].childNodes[0].nodeValue)];
+		}
+		//keys排序
+		for (var i = 0; i < keys.length-1; i++) {
+			for (var j = 0; j < keys.length-i-1; j++) {
+				if(keys[j][1]<keys[j+1][1]){
+					temp=keys[j];
+					keys[j]=keys[j+1];
+					keys[j+1]=temp;
+				}
+			}
+		}
+		if(bool){
+			for (var i = 0; i < keys.length; i++) {
+				table.appendChild(trArr[keys[i][0]]);
+			}
+		}else{
+			for (var i = keys.length-1; i >=0 ; i--) {
+				table.appendChild(trArr[keys[i][0]]);
+			}
+		}
+		
+	}
+
+		// var arr=[];
+	//1.先把每个同学的数据放在数组里
+	// function init() {
+	// 	var sts=document.getElementsByTagName('tr');
+	// 	for (var i = 1; i < sts.length; i++) {
+	// 		var st=sts.getElementsByTagName('td');
+	// 		arr.push([]);//每行一个数组
+	// 		arr[i-1].push(st);//子数组第一个元素储存 行元素
+	// 		for (var j = 0; j < 5; j++) {
+	// 			var key=st[j].childNodes[0].nodeValue;
+	// 			arr[i].push(key);//子数组存单个学生的数据
+	// 		}
+	// 	}
+	// }
+	// 2.比较函数
+	// 3.换行函数
+</script>
+</body>
+</html>

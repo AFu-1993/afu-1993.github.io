@@ -100,14 +100,6 @@ li.selected{
 
 
 
-
-
-
-
-
-
-
-
 #main{
 	position: fixed;
 	margin-left: 210px;
@@ -145,7 +137,12 @@ li.selected{
 	color: #333;
 	box-shadow: 1px 1px 10px 1px #666;
 	padding:20px 0 20px 50px;
+	transition: margin 1s;
 }
+#main>div>.content:hover{
+	margin-left: 10px;
+}
+
 #main>div>.content span{
 	font-weight: bold;
 }
@@ -218,7 +215,7 @@ li.selected{
 	background-size: cover;
 }
 #main .d3 p{
-	color: #fff;
+	color: #ddd;
 }
 #main .d3 .content{
 	color: #fff;
@@ -232,16 +229,50 @@ li.selected{
 	color: #FCF507;
 }
 .pic{
-	margin-top: 10px;
+	border-top: 1px dotted #ccc;
+	width: 300px;
+	height: 100px;
+	padding-top: 20px;
 	position: relative;
 	z-index: 1;
+	padding-left: 10px;
+
+}
+.pic span{
+	display: block;
+	position: absolute;
+	font-size: 12px;
+	color: #F11F67;
+	z-index: 9;
 }
 .pic a{
+	width: 140px;
 	display: block;
+	position: absolute;
+	z-index: 5;
+}
+.content .pic a:hover{
+	z-index: 10;
+}
+.pic a:hover img{
+	width: 200%
 }
 .pic img{
 	display: block;
-	width: 50%;
-	border: 1px solid #fff;
-	border-radius: 5px;
+	width: 100%;
+	transition: width 1s;
+}
+.pic a.pic2{
+	display: block;
+	width: 60px;
+	left: 120px;
+	top: 20px;
+	z-index: 4;
+}
+.pic a.pic3{
+	display: block;
+	width: 120px;
+	left: 130px;
+	top: 20px;
+	z-index: 3;
 }
